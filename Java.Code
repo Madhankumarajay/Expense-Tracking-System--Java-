@@ -1,0 +1,126 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Expense {
+    private String description;
+    private double amount;
+    private String category;
+
+    public Expense(String description, double amount, String category) {
+        this.description = description;
+        this.amount = amount;
+        this.category = category;
+    }
+
+    public void display() {
+        System.out.println("Description: " + description +
+                ", Amount: ₹" + amount +
+                ", Category: " + category);
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+}
+
+public class ExpenseTracker {
+
+    private static ArrayList<Expense> expenses = new ArrayList<>();
+    private static Scanner sc = new Scanner(System.in);
+
+    public static void addExpense() {
+        System.out.println("\nEnter expense description:");
+        String desc = sc.nextLine();
+
+        System.out.println("Enter amount:");
+        double amount = sc.nextDouble();
+        sc.nextLine();
+
+        System.out.println("Enter category (Food, Travel, Bills, etc):");
+        String cat = sc.nextLine();
+
+        Expense e = new Expense(desc, amount, cat);
+        expenses.add(e);
+
+        System.out.println("Expense added successfully!");
+    }
+
+    public static void viewExpenses() {
+        if (expenses.isEmpty()) {
+            System.out.println("\nNo expenses recorded.");
+            return;
+        }
+
+        System.out.println("\n Expense History:");
+        for (Expense e : expenses) {
+            e.display();
+        }
+    }
+
+    public static void totalExpenses() {
+        double total = 0;
+        for (Expense e : expenses) {
+            total += e.getAmount();
+        }
+        System.out.println("\n Total Expenses: ₹" + total);
+    }
+
+    public static void filterByCategory() {
+        System.out.println("\nEnter category to filter:");
+        String cat = sc.nextLine();
+        boolean found = false;
+
+        System.out.println("\n Expenses in category: " + cat);
+
+        for (Expense e : expenses) {
+            if (e.getCategory().equalsIgnoreCase(cat)) {
+                e.display();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No expenses found under this category.");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        while (true) {
+            System.out.println("\n====== Expense Tracker ======");
+            System.out.println("1. Add Expense");
+            System.out.println("2. View Expenses");
+            System.out.println("3. Total Expense");
+            System.out.println("4. Filter by Category");
+            System.out.println("5. Exit");
+
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+            sc.nextLine(); // clear buffer
+
+            switch (choice) {
+                case 1:
+                    addExpense();
+                    break;
+                case 2:
+                    viewExpenses();
+                    break;
+                case 3:
+                    totalExpenses();
+                    break;
+                case 4:
+                    filterByCategory();
+                    break;
+                case 5:
+                    System.out.println("Thanks for using Expense Tracker!");
+                    return;
+                default:
+                    System.out.println("Invalid choice, try again!");
+            }
+        }
+    }
+}
