@@ -1,0 +1,77 @@
+====== Expense Tracker ======
+1. Add Expense
+2. View Expenses
+3. Total Expense
+4. Filter by Category
+5. Exit
+Enter choice: 1
+
+Enter expense description:
+Food
+Enter amount:
+150
+Enter category (Food, Travel, Bills, etc):
+Food
+Expense added successfully!
+
+====== Expense Tracker ======
+1. Add Expense
+2. View Expenses
+3. Total Expense
+4. Filter by Category
+5. Exit
+Enter choice: 1
+
+Enter expense description:
+Bus Ticket
+Enter amount:
+30
+Enter category (Food, Travel, Bills, etc):
+Travel
+Expense added successfully!
+
+====== Expense Tracker ======
+1. Add Expense
+2. View Expenses
+3. Total Expense
+4. Filter by Category
+5. Exit
+Enter choice: 2
+
+ Expense History:
+Description: Food, Amount: ₹150.0, Category: Food
+Description: Bus Ticket, Amount: ₹30.0, Category: Travel
+
+====== Expense Tracker ======
+1. Add Expense
+2. View Expenses
+3. Total Expense
+4. Filter by Category
+5. Exit
+Enter choice: 3
+
+Total Expenses: ₹180.0
+
+====== Expense Tracker ======
+1. Add Expense
+2. View Expenses
+3. Total Expense
+4. Filter by Category
+5. Exit
+Enter choice: 4
+
+Enter category to filter:
+Food
+
+ Expenses in category: Food
+Description: Food, Amount: ₹150.0, Category: Food
+
+====== Expense Tracker ======
+1. Add Expense
+2. View Expenses
+3. Total Expense
+4. Filter by Category
+5. Exit
+Enter choice: 5
+
+Thanks for using Expense Tracker!
