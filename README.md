@@ -1,18 +1,18 @@
 # Expense Tracking System (Java)
 
-## 📌 Overview
+## Overview
 A simple Java console application to record daily expenses, view history and generate spending summary.
 
-## ✨ Features
+##  Features
 - Add expense
 - View all expenses
 - Calculate total spending
 - Menu-driven interface
 
-## 🛠 Technologies Used
+## Technologies Used
 - Java
 - OOP Concepts
 - ArrayList / File Handling
 
-## 🎯 Learning Outcome
+## Learning Outcome
 Improved understanding of OOP, modular programming, user interaction, and basic data processing logic.
